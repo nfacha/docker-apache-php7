@@ -13,6 +13,3 @@ phpenmod mcrypt && \
 rm -rf /var/lib/apt/lists/* && \
 cd /tmp && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 RUN composer global require hirak/prestissimo
-RUN composer global require "phpunit/phpunit=4.1.*"
-RUN composer global require "phpunit/php-invoker=~1.1."
-RUN composer global require "fxp/composer-asset-plugin:~1.3"
