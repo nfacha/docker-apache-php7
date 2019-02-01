@@ -14,5 +14,6 @@ php7.2-fpm php7.2-cli php7.2-mysql php7.2-pgsql php7.2-sqlite3 php7.2-redis \
 php7.2-apcu php7.2-intl php7.2-imagick php7.2-json php7.2-gd php7.2-curl php-curl && \
 phpenmod mcrypt && \
 rm -rf /var/lib/apt/lists/* && \
+a2enconf php7.2-fpm && \
 cd /tmp && curl -sS https://getcomposer.org/installer | php7.2 && mv composer.phar /usr/local/bin/composer
 RUN composer global require hirak/prestissimo
