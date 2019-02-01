@@ -1,12 +1,15 @@
 FROM nimmis/apache
 
-MAINTAINER nimmis <kjell.havneskold@gmail.com>
+MAINTAINER facha <eu@nunofacha.com>
 
 # disable interactive functions
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && \
-apt-get install -y php libapache2-mod-php  \
+RUN apt-get update -y
+RUN apt-get install software-properties-common -y
+RUN add-apt-repository ppa:ondrej/php -y
+RUN apt-get update -y
+RUN apt-get install -y php7.1 libapache2-mod-php  \
 php-fpm php-cli php-mysqlnd php-pgsql php-sqlite3 php-redis \
 php-apcu php-intl php-imagick php-mcrypt php-json php-gd php-curl && \
 phpenmod mcrypt && \
