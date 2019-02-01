@@ -1,4 +1,4 @@
-## Apache2 with php7 on Ubuntu 16.04 LTS
+## Apache2 with php7.1 on Ubuntu 16.04 LTS
 
 This is a docker images with  Ubuntu 16.04 LTS with apache2 and php7/composer
 
